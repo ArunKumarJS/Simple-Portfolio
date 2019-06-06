@@ -190,7 +190,8 @@ header li a {
         grid-template-columns: 70% auto;
     -ms-grid-rows: 60% auto;
         grid-template-rows: 60% auto;
-        grid-template-areas: "banner skill" "banner social";
+        grid-template-areas: "banner skill"
+ "banner social";
     height: 100vh;
   }
   section.banner {
@@ -211,6 +212,7 @@ header li a {
   }
   section.social p {
     padding-top: 4em;
+    padding-bottom: -1em;
   }
 }
 /*# sourceMappingURL=style.css.map */
