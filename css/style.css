@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+body, html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat";
+  display: none;
+}
+
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 2em);
+  background: white;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header li a {
+  padding: 1em;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  color: white;
+}
+
+.wrapper section {
+  padding: 3em;
+}
+
+.wrapper section h1, .wrapper section h2, .wrapper section .read-btn {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.wrapper section h2 {
+  font-size: 1.4rem;
+}
+
+.wrapper section .read-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background: url("../images/arrow.svg") no-repeat;
+  background-size: 8px;
+  background-position: 0 1px;
+  padding-left: 1em;
+}
+
+.wrapper section .primary {
+  padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+  background-position: 3em;
+  border: 1px solid white;
+  display: inline-block;
+  margin-top: 3em;
+  margin-left: -3em;
+  color: white;
+}
+
+.wrapper section .clipper {
+  overflow: hidden;
+}
+
+.wrapper section.banner {
+  padding-top: 8em;
+  background: url("../images/bg.jpg");
+  background-size: cover;
+}
+
+.wrapper section.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.wrapper section.banner h1 {
+  font-size: 2.4rem;
+}
+
+.wrapper section.skill, .wrapper section.social {
+  color: black;
+  font-size: .9rem;
+}
+
+.wrapper section.skill {
+  background: #59FEBC;
+}
+
+.wrapper section.skill p {
+  width: 55%;
+  line-height: 1.7em;
+}
+
+.wrapper section.skill .read-btn {
+  text-decoration: none;
+  background: url("../images/arrow2.svg") no-repeat;
+  background-size: 8px;
+  background-position: 0 4px;
+  padding-left: 1em;
+  margin-top: 1em;
+  display: block;
+  background-position: 0 .3em;
+  border: 2px solid black;
+}
+
+.wrapper section.skill .secondary {
+  padding: 0.5em 1em 0.5em calc(3em - 10px);
+  background-position: 1em;
+  border: 1px solid black;
+  display: inline-block;
+  margin-top: 1em;
+  margin-left: 0em;
+  color: black;
+}
+
+.wrapper section.social {
+  background: #DEFFE9;
+}
+
+.wrapper section.social h2 {
+  margin-bottom: 20px;
+}
+
+.wrapper section.social .icons {
+  margin-bottom: 1em;
+  margin-top: -0.5em;
+  font-size: 15pt;
+}
+
+.wrapper section.social a i {
+  color: black;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.wrapper section.social p {
+  margin-top: 1em;
+  margin-bottom: -2.5em;
+}
+
+.wrapper section.social p .red {
+  color: red;
+  font-size: 15pt;
+}
+
+@media only screen and (min-width: 760px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  header {
+    background: none;
+  }
+  .wrapper {
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+    -ms-grid-rows: 60% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: "banner skill" "banner social";
+    height: 100vh;
+  }
+  section.banner {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: banner;
+  }
+  section.skill {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: skill;
+  }
+  section.social {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: social;
+  }
+  section.social p {
+    padding-top: 5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

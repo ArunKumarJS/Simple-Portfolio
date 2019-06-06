@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">ARUN.JS</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <section class="banner">
+            <div class="inner">
+                <div class="clipper">
+                    <h1>Front-End Developer</h1>
+                </div>
+                <div class="anim-panel">
+                    <p>Self-Taught & Life-Long Learner</p>
+                    <a href="#" class="read-btn primary">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Skills</h2>
+                </div>
+                <div class="anim-panel">
+                        <p>Html5, CSS3, SASS<br/>
+                        JavaScript, jQuery<br/>
+                        Bootstrap4<br/>
+                        Adobe XD</p>
+                        <a href="#" class="read-btn secondary">Read More</a>
+                </div>
+            </div>
+
+        </section>
+        <section class="social">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Social Media</h2>
+                </div>
+                <div class="anim-panel icons">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/arun-kumar-439170158" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="footer">Made with <i class="fas fa-heart red"></i> in My Home</p>
+            </div>
+        </section> 
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function(event){
+
+            window.addEventListener("load", function(e){
+                document.body.style.display = "block";
+
+                var tl = new TimelineMax();
+                tl.staggerFrom("section", 2, {
+                    opacity: 0,
+                    scale: 0.5,
+                    ease: Power2.easeOut
+                }, 0.2)
+
+                tl.staggerFrom('h1, h2', .5,{
+                    opacity: 0,
+                    y: -40,
+                    ease: Power2.easeInOut
+                }, 0.2, "-=2")
+                tl.staggerFrom('.anim-panel, p', 1,{
+                    opacity: 0,
+                    y: -40,
+                    ease: Power2.easeInOut
+                }, 0.2, "-=1.5")
+
+                    }, false);
+
+        });
+
+    </script>
+</body>
+</html>
